@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/1 calculadora/css/styles.css"> <!--siempre se vinculas los archivos .css que son los que el navegador puede leer-->
+</head>
+<body>
+    <!-- <h1>florpa calculator</h1> -->
+    <div class="container"> <!--contenedor completo de la calculadora-->
+        <div class="calculator dark"><!--espacio para cambiar el tema a oscuro-->
+            <div class="theme-toggler active"> <!--alternador de tema a oscuro (activador)-->
+                <i class="toggler-icon"></i> <!--icono del toggler-->
+            </div>
+            <div class="display-screen"> <!--para visualizar todos lo que se va escribiendo en la calculadora-->
+                <div id="display"></div> <!--los id's sirven para manipularlos desde el DOM-->
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td>
+                        <td><button class="btn-operator" id="/">/</button></td>
+                        <td><button class="btn-operator" id="*">x</button></td>
+                        <td><button class="btn-operator" id="backspace">˿</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id=".">.</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-number" id="00">00</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

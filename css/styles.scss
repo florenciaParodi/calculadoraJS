@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* h1{
+    color: violet;
+} */
+
+body{
+    background: linear-gradient(45deg, rgb(117, 106, 182), rgb(180, 148, 202));
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(183, 255, 155);
+    background-color: rgb(210, 185, 226);
+    #display{
+        //background-color: rgb(140, 91, 140);
+        color: white;
+        //border-radius: 10px;
+        //box-shadow: 0 0 5px rgb(163, 116, 163);
+        height: 100px;
+        width: auto;
+        padding: 5px;
+        margin: 15px;
+        font-size: 30px;
+        display: flex;
+        align-items: end;
+        justify-content: right;
+    }
+    #clear{
+        background-color: rgb(255, 243, 218);
+        color: rgb(172, 135, 197);
+    }
+    .btn-number{
+        background-color: rgb(218, 255, 203);
+        color: rgb(172, 135, 197);
+    }
+    .btn-operator{
+        background-color: rgb(197, 166, 217);
+        color: white;
+    }
+    #backspace{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .btn-equal{
+        background-color: rgb(136, 255, 164);
+        color: rgb(172, 135, 197);
+    }
+    #equal{
+        height: 130px;
+    }
+    &.dark{
+        background-color: rgb(137, 138, 166);
+        box-shadow: 0 0 30px rgba(90, 22, 118, 0.888);
+        #display{
+            color: white;
+            //box-shadow: 0 0 5px rgb(104, 103, 172);
+        }
+        #clear{
+            background-color: rgb(162, 103, 172);
+            color: rgb(214, 239, 237);
+        }
+        .btn-number{
+            background-color: rgb(183, 211, 223);
+        }
+        .btn-operator{
+            background-color: rgb(201, 187, 207);
+        }
+        #equal{
+            color: rgb(214, 239, 237);
+            background-color: rgba(90, 22, 118, 0.888);
+        }
+    }
+}   
+
+.theme-toggler{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: 5px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 1;
+    &::before{
+        content: '';
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        top: 50%;
+        transform: translate(-50%, -50%) ;
+        border-radius: 50%;
+        background-color: #ffffff;
+        z-index: -1;
+    }
+}
+
+.theme-toggler .active{
+    color: rgb(0, 0, 0);
+    &::before {
+        background-color: rgb(255, 255, 255);
+    }
+    }
+
+button{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    margin: 2px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
